@@ -1,5 +1,5 @@
-require("Arduino-Nvim.remap")
-require("Arduino-Nvim.libGetter")
+require("Arduino-Nvim-lazyfix.remap")
+require("Arduino-Nvim-lazyfix.libGetter")
 
 
 local M = {}
