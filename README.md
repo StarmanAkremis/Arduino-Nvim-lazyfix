@@ -35,8 +35,8 @@ git clone https://github.com/yuukiflow/Arduino-Nvim.git ~/.config/nvim/lua/Ardui
 ```lua
 {
   "StarmanAkremis/Arduino-Nvim-lazyfix",
-  config = function()
   lazy = false,
+  config = function()
     require("Arduino-Nvim-lazyfix").setup()
   end,
   dependencies =
