@@ -33,16 +33,18 @@ git clone https://github.com/yuukiflow/Arduino-Nvim.git ~/.config/nvim/lua/Ardui
 
 2. Add the following to your `init.lua`:
 ```lua
--- Load LSP configuration first
-require("Arduino-Nvim.lsp").setup()
+{
+  "StarmanAkremis/Arduino-Nvim.lazyfix",
+  config = function()
+    require("Arduino-Nvim.lazyfix").setup()
+  end,
+  dependencies =
+  {
+    "nvim-telescope/telescope.nvim",
+    "neovim/nvim-lspconfig",
+  }  
+},
 
--- Set up Arduino file type detection
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = "arduino",
-    callback = function()
-        require("Arduino-Nvim")
-    end
-})
 ```
 
 ## Usage
